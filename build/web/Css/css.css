@@ -1,0 +1,96 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Dec 21, 2022, 5:49:34 PM
+    Author     : Naser
+*/
+*{
+    box-sizing: border-box;
+    margin: 0px
+}
+body{
+    background-color: #EEE
+}
+.parent{
+    margin:2%;
+}
+.list{
+    margin-right: 0;
+    float: left;
+    overflow: auto
+}
+.parent>div:first-child{
+    width: 30%;
+    
+}
+.parent>div:last-child{
+    width: 60%
+}
+h1{
+    font-size: 2em;
+    font-family: "Times New Roman" ,sans-serif;
+    font-weight: bold;  
+    white-space: nowrap;
+    text-overflow:ellipsis;
+    overflow:hidden  
+}
+.fdetail{
+    width: 45%;
+    margin: 10px auto
+}
+table{
+    background-color:#ccc;
+    width: 98%;
+    color: #000000;
+    white-space: nowrap
+}
+table td{
+    border:1px solid #ddd; 
+    padding: 0.5%;
+    min-width: fit-content
+}
+table thead td{
+    border-color: #ccc;
+    color: #ffffff;
+    background-color: rgb(0,0,127);
+    text-align: center;
+    font-weight: bold;
+    line-height: 1.5;
+    font-size: 2em
+}
+.fdetail td:has(a):hover, .list table tbody tr:hover{
+    background-color:#ff7788;
+    color: #ffffff
+}
+.list table tbody tr td:first-child{
+    position: relative
+} 
+
+@media(max-width:902px){
+    .list{
+        float: none;
+        margin:2% auto
+    }
+    .parent>div:first-child{
+       width: 90%
+    }
+    .parent>div:last-child{
+        width: 90%
+    }
+    h1{
+        font-size: 1em
+    }
+    table td {
+        padding-left: 3px
+    }
+  
+    table thead td{
+    font-weight: 400;
+    font-size: 1rem;
+    text-align: left;
+    padding-left: 3px
+    }
+}
